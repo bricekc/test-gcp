@@ -21,6 +21,9 @@ steps:
       - '--platform'
       - 'managed'
 
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 substitutions:
   _SERVICE_NAME: run-test
   _REGION: europe-west1
