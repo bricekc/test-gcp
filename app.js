@@ -3,7 +3,7 @@ const app = express();
 const port = 8080;
 
 app.get('/', (req, res) => {
-  res.send('Hello World! coucou');
+  res.send('Hello World! coucou hibou');
 });
 admin.initializeApp();
 console.log('Firebase initialisé sur Cloud Run avec l\'authentification par défaut');
