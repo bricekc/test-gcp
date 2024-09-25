@@ -7,3 +7,9 @@ docker tag c2893a4196b120c6414821ca16ad971127b22f219985514212f4d2bc8368eee7 euro
 docker push  europe-west1-docker.pkg.dev/test-terraform-435414/my-repo/my-app:tag  
 
 terraform apply
+
+a tester : 
+gcloud run deploy <service-name> \
+  --image <your-repo>/<image>:<new-tag> \
+  --platform managed \
+  --region <region>
