@@ -7,5 +7,5 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 substitutions:
-  _SERVICE_NAME: run-test
+  _SERVICE_NAME: run-tes
   _REGION: europe-west1
