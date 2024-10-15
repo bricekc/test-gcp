@@ -4,8 +4,9 @@ const port = 8080;
 const admin = require('firebase-admin');
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World! coucou hibou');
+app.get('/api/users', async (req, res) => {
+  const doc = await db.collection('users').get()
+  res.send(doc);
 });
 admin.initializeApp();
 console.log('Firebase initialisé sur Cloud Run avec l\'authentification par défaut');
