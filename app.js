@@ -3,6 +3,7 @@ const app = express();
 const port = 8080;
 const admin = require('firebase-admin');
 
+app.use(express.json());
 
 app.get('/api/users', async (req, res) => {
   const doc = await db.collection('users').get()
