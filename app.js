@@ -6,8 +6,13 @@ const admin = require('firebase-admin');
 app.use(express.json());
 
 app.get('/api/users', async (req, res) => {
-  const doc = await db.collection('users').get()
-  res.send(doc);
+  try {
+    const snapshot = await db.collection('users').get();
+    const users = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    res.send(users);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 });
 admin.initializeApp();
 console.log('Firebase initialisé sur Cloud Run avec l\'authentification par défaut');
