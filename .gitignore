@@ -16,4 +16,4 @@ crash.log
 
 *.backup
 
-*.tf
+test-terraform/
