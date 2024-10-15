@@ -17,3 +17,5 @@ crash.log
 *.backup
 
 test-terraform/
+
+node_modules/
